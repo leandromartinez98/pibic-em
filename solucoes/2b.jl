@@ -5,8 +5,12 @@ raio_terra = 6.371e6 # em metros
 
 massa_corpo = 1.0 # kg
 
-x = 0. 
-y = raio_terra + 1.
+r = raio_terra + 1.
+
+teta = 45 * ( pi / 180 ) 
+
+x = r * cos(teta)
+y = r * sin(teta)
 
 d = sqrt( x^2 + y^2 )
 

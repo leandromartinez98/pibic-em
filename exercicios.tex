@@ -121,14 +121,48 @@ A força gravitacional aponta para o centro da terra. Ela tem a forma
 F = G \frac{m_1}{m_2}{r^2}
 \] 
 onde $G$ é uma constante, $m_1$ e $m_2$ são as massas dos dois corpos (a
-terra é o outro objeto), e $r$ a distância entre eles. Vamos simplificar
-as contas e escrever $F = 1/r^2$.  
-Vamos imaginar que o centro da terra está na posição $x=(0,0)$. 
+terra é o outro objeto), e $r$ a distância entre eles. A constante $G$
+vale $G = 6.67\times 10^{-11}$m$^3/$kg~s$^2$. A massa da terra é
+$5.97\times 10^{24}$kg, e o raio da terra é $6371$~km, ou 
+$6.371 \times 10^{6}$m.
+Vamos imaginar que o centro da terra está na posição $x=(0,0)$, e que o
+temos um objeto que pesa 1 kg, e trabalhar com uma representação da
+terra em duas dimensões. 
 \begin{enumerate}
 \item
-Faça um código que calcule a força que age sobre o corpo dada uma
-posição qualquer do corpo. Note que a força depende da distância entre o
-corpo e o centro da terra.  
+Faça um código que calcule a força que age sobre o corpo, na situação
+da figura (a) ilustrada abaixo. Note que a coordenada $x$ do objeto é
+zero, e que $y$ é a soma da altura do objeto com o raio da terra. 
+\begin{center}
+\includegraphics[width=12cm]{./figuras/terra.pdf}
+\end{center}
+\item
+Modifique o seu programa para tentar calcular a força que atua sobre o
+corpo quando ele está em qualquer lugar da terra, mas a uma altura de
+1~m, como ilustrado na figura (b). As posições $x$ e $y$ agora dependem
+do ângulo $\theta$, como ilustrado na figura. 
+\end{enumerate}
+
+\item
+A força que você calculou no exercício anterior aponta sempre para o
+centro da terra. Como mostra a figura abaixo, ela pode ser decomposta em
+duas componentes, $F_x$ e $F_y$, que dependem do mesmo ângulo $\theta$
+da figura.
+\begin{center}
+\includegraphics[width=12cm]{./figuras/terra2.pdf}
+\end{center}
+\begin{enumerate}
+\item
+Faça o seu programa calcular cada uma das componentes separadamente.
+\item
+Calcule a aceleração em cada direção, separadamente, no mesmo programa.
+\item
+O movimento é acelerado nas duas direções, $x$ e $y$. Portanto, a queda
+do corpo obedece a lei $s = s_0 + v_0 + at^2/2$ para cada direção.
+Adicione ao seu programa a conta que calcula a posição (tanto em $x$
+como em $y$) do corpo para qualquer instante de tempo. Assuma que a
+velocidade inicial do corpo é nula (ou seja, ele começa parado). Preste
+atenção que as posições vão ser em relação ao centro da terra.  
 \end{enumerate}
 
 
