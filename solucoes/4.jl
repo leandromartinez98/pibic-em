@@ -10,7 +10,7 @@ let TerraLua
   massa_terra = 1.
   massa_lua = 0.0123
   
-  npassos = 27 * 24 * 60 # um dia, um passo por minuto
+  npassos = 30 * 24 * 60 # um mes, um passo por minuto
 
   # Iniciando os vetores de posição, velocidade e tempo
 

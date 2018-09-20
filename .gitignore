@@ -10,3 +10,4 @@ deps/deps.jl
 *latexmk 
 *.toc
 solucoes/*.png
+solucoes/*.xyz
