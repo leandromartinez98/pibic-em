@@ -50,6 +50,14 @@ let TerraLua
     x[i] = x[i-1] + vx[i-1]*dt + (ax/2)*dt^2
     y[i] = y[i-1] + vy[i-1]*dt + (ay/2)*dt^2
 
+    # Para criar o arquivo para o PyMol
+    if i % 100 == 0
+      println("2")
+      println("Lua")
+      println("C ",0.,0.,0.)
+      println("H ",x[i]," ",y[i]," ",0.)
+    end
+
   end
 
   plot(x,y)
