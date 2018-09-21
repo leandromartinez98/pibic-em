@@ -24,7 +24,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.4962331"
-     inkscape:cx="230.37532"
+     inkscape:cx="162.27271"
      inkscape:cy="858.80769"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -248,10 +248,10 @@
          y="68.621376"
          style="stroke-width:0.26458332" /></text>
     <g
-       id="g3705">
+       id="g1051">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.16935156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1155)"
-         d="m 62.506827,87.896382 0,-46.50783"
+         d="M 62.506827,87.896382 V 41.388552"
          id="path1151"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
@@ -260,7 +260,7 @@
          cy="73.184021"
          cx="62.528549"
          id="path10"
-         style="fill:none;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="fill:none;stroke:#000000;stroke-width:0.15000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <text
          id="text819"
          y="83.097565"
@@ -309,14 +309,14 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:4.39268589px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10981715"
-         x="30.089096"
-         y="58.727783"
+         x="28.287214"
+         y="59.045761"
          id="text1472"><tspan
            sodipodi:role="line"
            id="tspan1470"
-           x="30.089096"
-           y="58.727783"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.10981715">1 <tspan
+           x="28.287214"
+           y="59.045761"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.10981715">60 <tspan
    id="tspan1717"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">x</tspan> raio da terra</tspan></text>
       <path
@@ -326,7 +326,7 @@
          d="M 59.536912,52.56161 V 63.839752"
          style="fill:none;stroke:#000000;stroke-width:0.16935156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.50805471, 0.50805471;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker2218);marker-end:url(#marker2258)" />
       <circle
-         style="fill:none;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;stroke:#000000;stroke-width:0.15000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="circle1613"
          cx="62.528549"
          cy="51.56144"
@@ -366,7 +366,7 @@
            y="55.036476"
            style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman,  Italic';stroke-width:0.12953067">v<tspan
    id="tspan3681"
-   style="font-size:65%;baseline-shift:sub">0</tspan></tspan></text>
+   style="font-size:64.99999762%;baseline-shift:sub">0</tspan></tspan></text>
     </g>
   </g>
 </svg>
