@@ -10,4 +10,5 @@ deps/deps.jl
 *latexmk 
 *.toc
 solucoes/*.png
+julia-exemplos/*.png
 solucoes/*.xyz
