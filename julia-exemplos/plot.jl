@@ -12,5 +12,8 @@ ndata, x, y = read_data("teste.dat", cols=[1,2], comment="#")
 plot(x,y,label="Dados 1")
 xlabel("x")
 ylabel("y")
+legend(loc="lower right")
+annotate("Veja aqui",xy=(5,40))
 savefig("plot.png")
+
 
