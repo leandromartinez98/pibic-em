@@ -7,6 +7,7 @@ struct Pessoa
   peso :: Float64
   altura :: Float64
   nascimento :: String
+  cor_do_cabelo :: String
   
 end
 
@@ -26,7 +27,7 @@ function idade( pessoa )
   ano_h = Dates.year(now())
 
   if ano_n > ano_h
-    error(" Voce mentiu na data de nascimento. ")
+    error(" Data de nascimento errada. ")
   end
 
   if mes_n > mes_h
@@ -40,10 +41,7 @@ function idade( pessoa )
     if dia_n > dia_h
       idade = ano_h - ano_n - 1
 
-    elseif dia_n < dia_h 
-      idade = ano_h - ano_n
-
-    elseif dia_n == dia_h 
+    elseif dia_n <= dia_h 
       idade = ano_h - ano_n
 
     end
@@ -51,7 +49,6 @@ function idade( pessoa )
   end
 
   return idade
-
 end
 
 function maisvelho(pessoa1,pessoa2)
@@ -61,7 +58,7 @@ function maisvelho(pessoa1,pessoa2)
   elseif idade(pessoa2) > idade(pessoa1)
     return pessoa2.nome
   else
-    return "Ambos tem a mesma idade."
+    return "Ambos têm a mesma idade."
   end
 
 end
