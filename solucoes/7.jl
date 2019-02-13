@@ -1,6 +1,4 @@
 
-
-
 struct Planeta
 
   nome :: String
@@ -14,15 +12,20 @@ end
 terra = Planeta("Terra", 5.972e24 , 6350. , 147e6 , 29.79 )
 marte = Planeta("Marte", 6.417e23, 3396. , 206e6 , 24.13 )
 
-planetas = [ terra, marte ]
-
-function nomes( planetas )
-  for planeta in planetas
-    println(planeta.nome)
+function maiormassa( planeta1, planeta2 )
+  if planeta1.massa > planeta2.massa
+    println(planeta1.nome," tem maior massa. ")
+  elseif planeta2.massa > planeta1.massa
+    println(planeta2.nome," tem maior massa. ")
+  else
+    println(" As massas são iguais. ")
   end
 end
 
-nomes(planetas)
+maiormassa(terra,marte)
+maiormassa(terra,terra)
+
+
 
 
 

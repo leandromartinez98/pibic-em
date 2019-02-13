@@ -1,4 +1,3 @@
-using Plots
 
 struct Planeta
 
@@ -16,16 +15,17 @@ jupiter = Planeta("Jupiter", 1.898e27 , 71450. , 740e6 , 13.06 )
 
 planetas = [ terra, marte, jupiter ]
 
-vtrans = [ planetas[i].vtrans for i in 1:3 ]
+function maiormassa( planetas )
+  maiormassa = planetas[1]
+  for planeta in planetas
+    if planeta.massa > maiormassa.massa
+      maiormassa = planeta
+    end
+  end
+  return maiormassa.nome
+end
 
-dsol = [ planetas[i].dsol for i in 1:3 ]
-
-plot(dsol,vtrans,xlabel="Distância ao sol",ylabel="Velocidade de translação")
-
-savefig("9.pdf")
-
-
-
+maiormassa(planetas)
 
 
 

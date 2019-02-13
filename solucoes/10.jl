@@ -1,3 +1,4 @@
+using Plots
 
 struct Planeta
 
@@ -15,13 +16,16 @@ jupiter = Planeta("Jupiter", 1.898e27 , 71450. , 740e6 , 13.06 )
 
 planetas = [ terra, marte, jupiter ]
 
-function nomes( planetas )
-  for planeta in planetas
-    println(planeta.nome)
-  end
-end
+vtrans = [ planetas[i].vtrans for i in 1:3 ]
 
-nomes(planetas)
+dsol = [ planetas[i].dsol for i in 1:3 ]
+
+plot(dsol,vtrans,xlabel="Distância ao sol",ylabel="Velocidade de translação")
+
+savefig("10.pdf")
+
+
+
 
 
 
