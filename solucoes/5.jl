@@ -59,7 +59,7 @@ let TerraLua
 
     vx_lua[i] = vx_lua[i-1] + ax_lua*dt
     vy_lua[i] = vy_lua[i-1] + ay_lua*dt
-  
+
     x_lua[i] = x_lua[i-1] + vx_lua[i-1]*dt + (ax_lua/2)*dt^2
     y_lua[i] = y_lua[i-1] + vy_lua[i-1]*dt + (ay_lua/2)*dt^2
 

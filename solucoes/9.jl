@@ -16,13 +16,13 @@ jupiter = Planeta("Jupiter", 1.898e27 , 71450. , 740e6 , 13.06 )
 planetas = [ terra, marte, jupiter ]
 
 function maiormassa( planetas )
-  maiormassa = planetas[1]
+  planeta_de_maiormassa = planetas[1]
   for planeta in planetas
-    if planeta.massa > maiormassa.massa
-      maiormassa = planeta
+    if planeta.massa > planeta_de_maiormassa.massa
+      planeta_de_maiormassa = planeta
     end
   end
-  return maiormassa.nome
+  return planeta_de_maiormassa.nome
 end
 
 maiormassa(planetas)

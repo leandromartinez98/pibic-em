@@ -38,30 +38,29 @@
 \begin{enumerate}\setcounter{enumi}{\exnumber}}
 {\global\chardef\exnumber=\value{enumi}\end{enumerate}\end{minipage}\end{lrbox}\fbox{\usebox{\fmbox}}\vspace{0.3cm}\end{center}}
 
-% Code blocks definitions
+% Code blocks definitions: Julia style
 
+\usepackage{jlcode}
 \usepackage{listings}
 
 \renewcommand{\t}{\textrm}
-\lstnewenvironment{code}{\lstset{language=[90]Fortran,
-  basicstyle=\ttfamily,
+\lstnewenvironment{code}{\lstset{language=Julia,
+  %basicstyle=\ttfamily,
   keywordstyle=\color{blue},
   commentstyle=\color{gray},
   identifierstyle=\color[RGB]{0,102,0}\textbf,
   xleftmargin=1.5cm,
   showstringspaces=false,
-  morecomment=[l]{!\ }% Comment only with space after !
 }}{}
 
 \lstdefinestyle{code}{
-  language=[90]Fortran, 
-  basicstyle=\ttfamily,
+  language=Julia, 
+  %basicstyle=\ttfamily,
   keywordstyle=\color{blue},
   commentstyle=\color{gray},
   identifierstyle=\color[RGB]{0,102,0}\textbf,
   xleftmargin=1.5cm,
   showstringspaces=false,
-  morecomment=[l]{!\ }% Comment only with space after !
 }
 \newcommand{\codefile}[1]{\lstinputlisting[style=code]{#1}
             \begin{center}
@@ -243,6 +242,37 @@ distância.
 \end{enumerate}
 Observe o gráfico: tente imaginar porque ele tem a cara que tem.
 
+\item
+Agora vamos acrescentar, em cada Planeta, as informações que vão definir
+a trajetória dos planetas na simulação. Primeiro, vamos refazer
+exercícios anteriores mudando a {\it estrutura de dados}. Vamos refazer
+o exercício 4. Agora, no entanto, todas as características de cada corpo
+(a Terra e a Lua, no caso) vão estar contidas dentro da estrutura
+Planeta que foi criada. As informações adicionais são as posições e
+velocidades iniciais e o vetor contendo a trajetória. As posições e
+velocidades iniciais são vetores de 2 posições (porque estamos simulando
+o sistema em duas dimensões só) que são definidos no início. O vetor da
+trajetória será calculado na simulação. Vetores são definidos dentro da
+estrutura, por exemplo, assim:
+\begin{code}
+struct Planeta
+  vini = Vector{}
+  xini = Vector{}
+  x = Vector{}
+end
+\end{code}
+Note que definimos apenas vetores sem especificar o que eles contém.
+Isso será feito quando inicializarmos cada componente específico. Por
+exemplo, usando a estrutura acima, temos 
+\begin{code}
+npassos = 1000
+vini = [ 0.546 , 0. ]
+xini = [ 0. , 60. ]
+x = [ 0. for i in 1:npassos ]
+Lua = Planeta(vini,xini,x)
+\end{code}
+Faça o mesmo para a Terra, e repita o exercício 4 usando sua nova
+estrutura de dados.
 
 \end{enumerate}
 
