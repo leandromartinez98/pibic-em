@@ -256,9 +256,14 @@ trajetória será calculado na simulação. Vetores são definidos dentro da
 estrutura, por exemplo, assim:
 \begin{code}
 struct Planeta
-  vini = Vector{}
-  xini = Vector{}
-  x = Vector{}
+  xini :: Float64  # posicao x inicial
+  yini :: Float64  # posicao y inicial
+  vxini :: Float64 # velocidade x inicial
+  vyini :: Float64 # velocidade y inicial
+  x = Vector{}     # vetor que contem as posicoes x ao longo da simulacao
+  y = Vector{}     # vetor que contem as posicoes y ao longo da simulacao 
+  vx = Vector{}    # vetor que contem as velocidades x ao longo da simulacao  
+  vy = Vector{}    # vetor que contem as velocidades y ao longo da simulacao   
 end
 \end{code}
 Note que definimos apenas vetores sem especificar o que eles contém.
@@ -266,11 +271,17 @@ Isso será feito quando inicializarmos cada componente específico. Por
 exemplo, usando a estrutura acima, temos 
 \begin{code}
 npassos = 1000
-vini = [ 0.546 , 0. ]
-xini = [ 0. , 60. ]
-x = [ 0. for i in 1:npassos ]
-Lua = Planeta(vini,xini,x)
+xini = 0. 
+yini = 60.
+vxini = 0.546 
+vyini = 0.
+x = [ 0. for i in 1:npassos ] # Definindo o vetor das posicoes em x
+y = copy(x) # Criando outro vetor igual em y
+vx = copy(x) # Criando outro vetor igual para velocidades em x
+vy = copy(x) # Criando outro vetor igual para velocidades em y
+Lua = Planeta(xini,yini,vxini,vyini,x,y,vx,vy)
 \end{code}
+Acrescente a massa, o raio e o nome à estrutura de dados. 
 Faça o mesmo para a Terra, e repita o exercício 4 usando sua nova
 estrutura de dados.
 
