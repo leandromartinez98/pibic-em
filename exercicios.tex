@@ -260,10 +260,10 @@ struct Planeta
   yini :: Float64  # posicao y inicial
   vxini :: Float64 # velocidade x inicial
   vyini :: Float64 # velocidade y inicial
-  x = Vector{}     # vetor que contem as posicoes x ao longo da simulacao
-  y = Vector{}     # vetor que contem as posicoes y ao longo da simulacao 
-  vx = Vector{}    # vetor que contem as velocidades x ao longo da simulacao  
-  vy = Vector{}    # vetor que contem as velocidades y ao longo da simulacao   
+  x :: Vector{}     # vetor que contem as posicoes x ao longo da simulacao
+  y :: Vector{}     # vetor que contem as posicoes y ao longo da simulacao 
+  vx :: Vector{}    # vetor que contem as velocidades x ao longo da simulacao  
+  vy :: Vector{}    # vetor que contem as velocidades y ao longo da simulacao   
 end
 \end{code}
 Note que definimos apenas vetores sem especificar o que eles contém.
