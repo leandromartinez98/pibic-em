@@ -28,10 +28,6 @@ let TerraLua
 
   npassos = 30 * 24 * 60 # um mes, um passo por minuto
 
-  # Dados da Lua
-
-  traj = [ 0. for i in 1:npassos ]
-
   lua = Planeta( "Lua",            # nome
                  0.273 ,           # raio 
                  0.0123,           # massa 
@@ -39,10 +35,10 @@ let TerraLua
                  60.,              # y inicial
                  0.565 ,           # velocidade inicial x
                  0. ,              # velocidade inicial y
-                 copy(traj),       # vetor para posicoes x 
-                 copy(traj),       # vetor para posicoes y 
-                 copy(traj),       # vetor para velocidades x 
-                 copy(traj)        # vetor para velocidades y 
+                 zeros(npassos),       # vetor para posicoes x 
+                 zeros(npassos),       # vetor para posicoes y 
+                 zeros(npassos),       # vetor para velocidades x 
+                 zeros(npassos)        # vetor para velocidades y 
                  ) # Fim
 
   # Dados da Terra
@@ -56,10 +52,10 @@ let TerraLua
                    0.,               # y inicial
                    vx_terra ,        # velocidade inicial x
                    0. ,              # velocidade inicial y
-                   copy(traj),       # vetor para posicoes x 
-                   copy(traj),       # vetor para posicoes y 
-                   copy(traj),       # vetor para velocidades x 
-                   copy(traj)        # vetor para velocidades y 
+                   zeros(npassos),       # vetor para posicoes x 
+                   zeros(npassos),       # vetor para posicoes y 
+                   zeros(npassos),       # vetor para velocidades x 
+                   zeros(npassos)        # vetor para velocidades y 
                    ) # Fim
   
   # Vetor de tempos

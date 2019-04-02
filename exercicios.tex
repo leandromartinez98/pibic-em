@@ -275,10 +275,10 @@ xini = 0.
 yini = 60.
 vxini = 0.546 
 vyini = 0.
-x = [ 0. for i in 1:npassos ] # Definindo o vetor das posicoes em x
-y = copy(x) # Criando outro vetor igual em y
-vx = copy(x) # Criando outro vetor igual para velocidades em x
-vy = copy(x) # Criando outro vetor igual para velocidades em y
+x = zeros(npassos) # Definindo o vetor das posicoes em x
+y = zeros(npassos) # Criando outro vetor igual em y
+vx = zeros(npassos) # Criando outro vetor igual para velocidades em x
+vy = zeros(npassos) # Criando outro vetor igual para velocidades em y
 Lua = Planeta(xini,yini,vxini,vyini,x,y,vx,vy)
 \end{code}
 Acrescente a massa, o raio e o nome à estrutura de dados. 
